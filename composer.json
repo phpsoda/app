@@ -21,6 +21,8 @@
         }
     },
     "require": {
+        "php": "^7.4",
+        "ext-json": "*",
         "phpsoda/framework": "dev-master"
     },
     "require-dev": {
