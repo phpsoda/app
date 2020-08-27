@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7cfadcac10e722a0ad53b42af9f6eb4",
+    "content-hash": "57295bc9b520ae77577b4528afd72a52",
     "packages": [
         {
             "name": "phpsoda/framework",
@@ -12,7 +12,11 @@
             "dist": {
                 "type": "path",
                 "url": "../framework",
-                "reference": "2636c1a1216226605cf9e4340d34ef79d0963b58"
+                "reference": "a8ab877c85b33a0b9a2f1f13d941949d12a4d9f1"
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.3"
@@ -1950,7 +1954,10 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.4",
+        "ext-json": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
