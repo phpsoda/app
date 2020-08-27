@@ -1,7 +1,6 @@
 {
     "name": "phpsoda/app",
     "description": "The PHPSoda App",
-    "minimum-stability": "dev",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -18,7 +17,7 @@
     "repositories": {
         "phpsoda/framework": {
             "type": "path",
-            "url": "/home/ibrokhim/Projects/Php/phpsoda/framework"
+            "url": "../framework"
         }
     },
     "require": {

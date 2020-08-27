@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "684655be29c07e92cac2491ab3a194ad",
+    "content-hash": "a7cfadcac10e722a0ad53b42af9f6eb4",
     "packages": [
         {
             "name": "phpsoda/framework",
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/home/ibrokhim/Projects/Php/phpsoda/framework",
-                "reference": "ff3ba704c004f4d244e3cd2edbf07213687902a4"
+                "url": "../framework",
+                "reference": "2636c1a1216226605cf9e4340d34ef79d0963b58"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.3"
@@ -34,7 +34,7 @@
             ],
             "description": "The PHPSoda Framework",
             "transport-options": {
-                "relative": false
+                "relative": true
             }
         }
     ],
@@ -1944,7 +1944,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "phpsoda/framework": 20
     },
