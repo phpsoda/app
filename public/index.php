@@ -2,7 +2,10 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+/**
+ * @var \PHPSoda\Application $app
+ */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-$response = new \PHPSoda\Http\JsonResponse(\PHPSoda\Http\Request::createFromGlobals());
+$response = $app->router->handle(\PHPSoda\Http\Request::createFromGlobals());
 $response->send();
