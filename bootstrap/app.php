@@ -1,9 +1,9 @@
 <?php
 
-use PHPSoda\Routing\Route;
+require '../routing/web.php';
 
-$app = PHPSoda\Application::getInstance();
+// Load configurations and etc. here
 
-Route::get('/', 'ExampleController@index');
+session_start();
 
-return $app;
+return PHPSoda\Application::getInstance();
