@@ -2,15 +2,16 @@
 
 namespace App\Gates;
 
+use PHPSoda\Helpers\StringHelper;
 use PHPSoda\Http\Request;
 
 class AuthGate
 {
     public function handle(Request $request)
     {
-        $header = $request->server->get('HTTP_AUTHORIZATION');
+        $header = $request->server->get('HTTP_AUTHORIZATION', '');
 
-        if ($header && substr($header, 0, 7) === 'Bearer ') {
+        if (StringHelper::startsWith($header, 'Bearer ')) {
             $token = substr($header, 7);
 
             if ($token === 'test') {
