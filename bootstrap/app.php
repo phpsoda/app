@@ -6,4 +6,8 @@ require '../routing/web.php';
 
 session_start();
 
-return PHPSoda\Application::getInstance();
+$app = PHPSoda\Application::getInstance();
+
+$app->singleton(\App\Services\ExampleService::class);
+
+return $app;
