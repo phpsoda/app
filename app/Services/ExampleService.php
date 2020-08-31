@@ -2,9 +2,7 @@
 
 namespace App\Services;
 
-use PHPSoda\Patterns\Singleton;
-
-class ExampleService extends Singleton
+class ExampleService
 {
     public function serve()
     {

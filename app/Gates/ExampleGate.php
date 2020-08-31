@@ -5,7 +5,7 @@ namespace App\Gates;
 use PHPSoda\Helpers\StringHelper;
 use PHPSoda\Http\Request;
 
-class AuthGate
+class ExampleGate
 {
     public function handle(Request $request)
     {

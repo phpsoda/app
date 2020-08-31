@@ -2,8 +2,10 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use PHPSoda\Application;
+
 /**
- * @var \PHPSoda\Application $app
+ * @var Application $app
  */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
