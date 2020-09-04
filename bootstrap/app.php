@@ -14,6 +14,6 @@ $app->set(ExampleService::class, function () {
     return new ExampleService();
 });
 
-print_r($app->get(ExampleService::class)->serve());
+$app->get(ExampleService::class)->serve();
 
 return $app;

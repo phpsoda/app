@@ -19,6 +19,10 @@ class ExampleGate
             }
         }
 
+        if ($request->query->get('api_token', '') === 'test') {
+            return true;
+        }
+
         return false;
     }
 }

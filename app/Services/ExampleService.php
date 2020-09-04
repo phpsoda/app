@@ -6,6 +6,6 @@ class ExampleService
 {
     public function serve()
     {
-        echo 'ExampleService serving!';
+        return 'ExampleService serving!';
     }
 }

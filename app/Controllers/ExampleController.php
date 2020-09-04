@@ -14,6 +14,8 @@ class ExampleController
     }
     public function create(Request $request)
     {
-        return new JsonResponse($request->request, 201);
+        return new JsonResponse([
+            'message' => 'Created!',
+        ], 201);
     }
 }
