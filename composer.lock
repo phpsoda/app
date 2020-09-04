@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5cf8e02d0e0968fb87c501aea4c02dc",
+    "content-hash": "23db5bf43fdac10f2b3fb8ae39efcb34",
     "packages": [
         {
             "name": "phpsoda/framework",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpsoda/framework.git",
-                "reference": "2b21db836ee487d8cdb469c4f9b4dc3799abcc44"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpsoda/framework/zipball/2b21db836ee487d8cdb469c4f9b4dc3799abcc44",
-                "reference": "2b21db836ee487d8cdb469c4f9b4dc3799abcc44",
-                "shasum": ""
+                "type": "path",
+                "url": "../framework",
+                "reference": "0d674b3d511a41039c0c9654ffae33a9b4923328"
             },
             "require": {
                 "ext-json": "*",
@@ -33,7 +27,11 @@
                     "PHPSoda\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -44,7 +42,9 @@
                 }
             ],
             "description": "The PHPSoda Framework",
-            "time": "2020-09-01T13:32:12+00:00"
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
