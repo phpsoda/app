@@ -14,12 +14,6 @@
             "App\\": "app/"
         }
     },
-    "repositories": {
-        "phpsoda/framework": {
-            "type": "path",
-            "url": "../framework"
-        }
-    },
     "require": {
         "php": "^7.3",
         "ext-json": "*",
