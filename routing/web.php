@@ -1,6 +1,6 @@
 <?php
 
-use PHPSoda\Routing\Route;
+use PHPSoda\Routing\Router;
 
-Route::get('/', 'ExampleController@index');
-Route::create('/create', 'ExampleController@create', ['GET', 'POST'], ['example']);
+Router::get('/', 'ExampleController@index');
+Router::createRoute('/create', 'ExampleController@create', ['GET', 'POST'], ['example']);
