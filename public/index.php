@@ -9,5 +9,5 @@ use PHPSoda\Application;
  */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-$response = $app->router->handle(\PHPSoda\Http\Request::createFromGlobals());
+$response = $app->get('router')->handle(\PHPSoda\Http\Request::createFromGlobals());
 $response->send();
