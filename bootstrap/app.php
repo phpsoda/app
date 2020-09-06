@@ -4,12 +4,16 @@ use App\Services\ExampleService;
 
 session_start();
 
-$basePath = dirname(__DIR__);
+$app = \PHPSoda\Application::initialize(dirname(__DIR__));
 
-$app = new \PHPSoda\Application($basePath);
+$app->set('router', new \PHPSoda\Routing\Router());
+
+$app->loadConfig('app');
 
 $app->set(ExampleService::class, function () {
     return new ExampleService();
 });
+
+require '../routing/web.php';
 
 return $app;

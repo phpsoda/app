@@ -23,6 +23,12 @@ class ExampleController
     {
         return new Response($this->exampleService->serve());
     }
+
+    public function show(string $id, Request $request)
+    {
+        return new Response('Showing resource with id = ' . $id);
+    }
+
     public function create(Request $request)
     {
         return new JsonResponse([
