@@ -1,6 +1,21 @@
 <?php
 
+use PHPSoda\Application;
+use PHPSoda\Http\JsonResponse;
 use PHPSoda\Routing\Router;
 
-Router::get('/', 'ExampleController@index');
-Router::createRoute('/create', 'ExampleController@create', ['GET', 'POST'], ['example']);
+/**
+ * @var Router $router
+ */
+$router = Application::getInstance()->get('router');
+
+$router->get('/', 'ExampleController@index');
+$router->get('/example/:id', 'ExampleController@show');
+$router->createRoute('/create', ['GET', 'POST'], 'ExampleController@create');
+$router->get('/users/:id/:action', function ($id, $action, $request) {
+    return new JsonResponse([
+        'request' => $request,
+        'id' => $id,
+        'action' => $action,
+    ]);
+});

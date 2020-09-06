@@ -2,18 +2,18 @@
 
 use App\Services\ExampleService;
 
-require '../routing/web.php';
-
-// Load configurations and etc. here
-
 session_start();
 
-$app = PHPSoda\Application::getInstance();
+$app = \PHPSoda\Application::initialize(dirname(__DIR__));
+
+$app->set('router', new \PHPSoda\Routing\Router());
+
+$app->loadConfig('app');
 
 $app->set(ExampleService::class, function () {
     return new ExampleService();
 });
 
-$app->get(ExampleService::class)->serve();
+require '../routing/web.php';
 
 return $app;
