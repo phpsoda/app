@@ -1,12 +1,12 @@
 <?php
 
 use App\Services\ExampleService;
+use PHPSoda\Application;
 
 session_start();
 
-$app = \PHPSoda\Application::initialize(dirname(__DIR__));
-
-$app->set('router', new \PHPSoda\Routing\Router());
+Application::initialize(dirname(__DIR__));
+$app = Application::getInstance();
 
 $app->loadConfig('app');
 
