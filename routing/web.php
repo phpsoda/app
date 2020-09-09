@@ -7,7 +7,7 @@ use PHPSoda\Routing\Router;
 /**
  * @var Router $router
  */
-$router = Application::getInstance()->get('router');
+$router = Application::getInstance()->get(Router::class);
 
 $router->get('/', 'ExampleController@index');
 $router->get('/example/:id', 'ExampleController@show');
